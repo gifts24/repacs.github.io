@@ -141,6 +141,7 @@
     height:50px;
     background:rgb(132,151,176); 
     border-radius: 10px;
+    font-size:1.1em;
    }
    #dyminfo_balloon1:hover {  
     padding:10px 20px;
@@ -179,6 +180,7 @@
     height:50px;
     background:rgb(132,151,176); 
     border-radius: 10px;
+    font-size:1.1em;
    }
    #dyminfo_balloon2:hover {  
     padding:10px 20px;
@@ -217,6 +219,7 @@
     height:50px;
     background:rgb(132,151,176); 
     border-radius: 10px;
+    font-size:1.1em;
    }
 #dyminfo_balloon3:hover {  
     padding:10px 20px;
