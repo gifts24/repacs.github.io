@@ -58,7 +58,7 @@
     border-radius:5px;
     box-shadow: 10px;
     border:0em;
-    box-shadow: 0px 4px 10px 1px black;
+    box-shadow: 0px 4px 10px 0px black;
     cursor:pointer;
 }
 #dyminfo_button_spat:hover{
@@ -70,7 +70,7 @@
     border-radius:5px;
     box-shadow: 10px;
     border:0em;
-    box-shadow: 0px 4px 10px 1px black;
+    box-shadow: 0px 4px 10px 0px black;
     cursor:pointer;
 }
 #dyminfo_button_fit{
@@ -80,7 +80,7 @@
     color:white;
     border-radius:5px;
     border:0em;
-    box-shadow: 0px 4px 10px 1px black;
+    box-shadow: 0px 4px 10px 0px black;
     cursor:pointer;
 }
 #dyminfo_button_fit:hover{
@@ -90,7 +90,7 @@
     color:RGB(248,203,173);
     border-radius:5px;
     border:0em;
-    box-shadow: 0px 4px 10px 1px black;
+    box-shadow: 0px 4px 10px 0px black;
     cursor:pointer;
 }
 #dyminfo_footer{
