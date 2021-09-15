@@ -6,7 +6,7 @@
     
 }
 #dyminfo_main ol{
-    list-style-type: style decimal;
+    list-style:none;
 }
 #dyminfo_main li{
     margin-bottom:10px;
