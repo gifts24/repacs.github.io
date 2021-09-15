@@ -5,10 +5,12 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
 }
+#dyminfo_main ol{
+    list-style-type: style decimal;
+}
 #dyminfo_main li{
     margin-bottom:10px;
     margin-left:25px;
-    list-style-type: style decimal;
 }
 #dyminfo_h3_area{
     padding-left:10px;
