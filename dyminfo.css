@@ -12,9 +12,14 @@
     margin-bottom:10px;
     margin-left:25px;
 }
+#dyminfo_main hr{
+    display:block;
+    margin-bottom:10px;
+    
+}
 #dyminfo_h3_area{
     padding-left:10px;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 #dyminfo_header{
     padding:10px;
