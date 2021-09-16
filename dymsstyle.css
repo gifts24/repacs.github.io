@@ -1,0 +1,192 @@
+#dymsinfo_body{
+    font-size:0.8em;
+    width:700px;
+    padding:0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+#dymsinfo_main ol{
+    list-style:none;
+}
+#dymsinfo_main li{
+    margin-bottom:10px;
+    margin-left:25px;
+}
+#dymsinfo_main hr{
+    display:block;
+    margin-bottom:10px;
+    
+}
+#dymsinfo_h3_area{
+    padding-left:10px;
+    margin-bottom:20px;
+}
+#dymsinfo_header{
+    padding:10px;
+    margin-bottom:10px;
+}
+#dymsinfo_header_title{
+    font-weight: bold;
+    margin-bottom:40px;
+}
+#dymsinfo_header_contents{
+    font-weight:bold;
+    text-align:center;
+}
+#dymsinfo_main{
+    padding:10px;
+    
+}
+
+#dymsinfo_table{
+    text-align:center;
+    width:600px;
+    margin:auto; 
+    border-collapse : collapse;
+    
+    
+}
+#dymsinfo_table th{
+    width:13%;
+    height:80px;
+    padding:5px;
+    
+}
+#dymsinfo_table td{
+    width:42.5%;
+    height:80px;
+    padding:5px;
+    
+}
+#dymsinfo_table_design1{
+    background-color:RGB(230,230,230);
+    border-radius:15px;
+    vertical-align:middle;    
+    height:100%;
+    width:100%;
+    display: table;
+}
+#dymsinfo_table_design2{
+    background-color:RGB(68,114,196);;
+    border-radius:15px;
+    height:100%;
+    width:100%;
+    color:white;
+    margin:0 auto;
+    display: table;
+    
+}
+#dymsinfo_table_design3{
+    background-color:RGB(236,241,255);
+    border-radius:15px;
+    height:100%;
+    width:100%;
+    margin:0 auto;
+    display: table;
+}
+#dymsinfo_table_design4{
+    background-color:RGB(230,230,230);
+    border-radius:15px;
+    height:50%;
+    width:100%;
+    border:none;
+    cursor:pointer;
+    display: table;
+}
+#dymsinfo_table_design4:hover{
+    background-color:RGB(200,200,200);
+    border-radius:15px;
+    height:50%;
+    width:100%;
+    display: table;
+    border:none;
+    cursor:pointer;
+    
+}
+#dymsinfo_table a{
+    text-decoration:none;
+}
+#dymsinfo_table a:link{
+    text-decoration:none;
+    color:black;
+}
+#dymsinfo_table a:visited{
+    text-decoration:none;
+    color:black;
+}
+
+#dymsinfo_main p{
+    display: table-cell;
+    text-align:center;
+    vertical-align: middle;
+}
+#dymsinfo_button_spat{
+    font-size:1.2em;
+    padding:10px 30px;
+    background-color:RGB(68,114,196);
+    color:white;
+    border-radius:5px;
+    box-shadow: 10px;
+    border:0em;
+    box-shadow: 0px 4px 10px 0px black;
+    cursor:pointer;
+}
+#dymsinfo_button_spat:hover{
+    font-size:1.2em;
+    padding:10px 30px;
+    color:RGB(68,114,196);
+    background-color:RGB(208,219,240);
+    
+    border-radius:5px;
+    box-shadow: 10px;
+    border:0em;
+    box-shadow: 0px 4px 10px 0px black;
+    cursor:pointer;
+}
+#dymsinfo_button_fit{
+    font-size:1.2em;
+    padding:10px 30px;
+    background-color:RGB(248,203,173);
+    color:white;
+    border-radius:5px;
+    border:0em;
+    box-shadow: 0px 4px 10px 0px black;
+    cursor:pointer;
+}
+#dymsinfo_button_fit:hover{
+    font-size:1.2em;
+    padding:10px 30px;
+    background-color:RGB(253,243,237);
+    color:RGB(248,203,173);
+    border-radius:5px;
+    border:0em;
+    box-shadow: 0px 4px 10px 0px black;
+    cursor:pointer;
+}
+#dymsinfo_footer{
+    font-size:1em;
+    padding:10px;
+    font-weight:bold;
+}
+#dymsinfo_section{
+    margin-bottom:0px;
+    display:block;
+    font-size:1.1em;
+}
+
+#dymsinfo_memoContents{
+    text-align:center;
+}
+#dymsinfo_button_table{
+    text-align:center;
+    width:80%;
+    min-width:400px;
+    height:120px;
+    margin:auto; 
+    border-collapse : collapse;
+}
+
+#dymsinfo_button_table td{
+    width:500px;
+    
+}
