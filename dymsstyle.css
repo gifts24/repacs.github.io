@@ -40,7 +40,7 @@
 
 #dymsinfo_table{
     text-align:center;
-    width:600px;
+    width:800px;
     margin:auto; 
     border-collapse : collapse;
     
@@ -53,7 +53,7 @@
     
 }
 #dymsinfo_table td{
-    width:60%;
+    width:42.5%;
     height:80px;
     padding:5px;
     
