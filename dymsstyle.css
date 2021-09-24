@@ -25,6 +25,9 @@
     padding:10px;
     margin-bottom:10px;
 }
+#dymsinfo_header h2{
+    font-size:1.1em;
+}
 #dymsinfo_header_title{
     font-weight: bold;
     margin-bottom:40px;
