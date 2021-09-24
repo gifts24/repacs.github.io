@@ -11,7 +11,7 @@
 #dymsinfo_main li{
     margin-bottom:10px;
     margin-left:25px;
-    font-size:0.9em;
+    font-size:0.8em;
 }
 #dymsinfo_main hr{
     display:block;
@@ -118,10 +118,10 @@
     display: table-cell;
     text-align:center;
     vertical-align: middle;
-    font-size:0.8em;
+    font-size:0.7em;
 }
 #dymsinfo_button_spat{
-    font-size:1.2em;
+    font-size:1.1em;
     padding:10px 30px;
     background-color:RGB(68,114,196);
     color:white;
@@ -132,7 +132,7 @@
     cursor:pointer;
 }
 #dymsinfo_button_spat:hover{
-    font-size:1.2em;
+    font-size:1.1em;
     padding:10px 30px;
     color:RGB(68,114,196);
     background-color:RGB(208,219,240);
@@ -144,7 +144,7 @@
     cursor:pointer;
 }
 #dymsinfo_button_fit{
-    font-size:1.2em;
+    font-size:1.1em;
     padding:10px 30px;
     background-color:RGB(248,203,173);
     color:white;
@@ -154,7 +154,7 @@
     cursor:pointer;
 }
 #dymsinfo_button_fit:hover{
-    font-size:1.2em;
+    font-size:1.1em;
     padding:10px 30px;
     background-color:RGB(253,243,237);
     color:RGB(248,203,173);
@@ -164,14 +164,14 @@
     cursor:pointer;
 }
 #dymsinfo_footer{
-    font-size:1em;
+    font-size:0.9em;
     padding:10px;
     font-weight:bold;
 }
 #dymsinfo_section{
     margin-bottom:0px;
     display:block;
-    font-size:1.1em;
+    font-size:1em;
 }
 
 #dymsinfo_memoContents{
