@@ -53,13 +53,13 @@
 }
 #dymsinfo_table th{
     width:13%;
-    height:80px;
+    height:55px;
     padding:5px;
     
 }
 #dymsinfo_table td{
     width:42.5%;
-    height:80px;
+    height:55px;
     padding:5px;
     
 }
@@ -187,7 +187,7 @@
     text-align:center;
     width:80%;
     min-width:400px;
-    height:120px;
+    height:90px;
     margin:auto; 
     border-collapse : collapse;
 }
