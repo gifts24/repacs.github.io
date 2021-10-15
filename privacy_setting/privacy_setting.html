@@ -164,7 +164,7 @@
 	<input id="codeBtn" type="button" value="줄바꿈" onclick="insertAtCursor('class-example', '<br>\n');">
 	<input id="codeBtn" type="button" value="네모칸" onclick="insertAtCursor('class-example', '<p> (이곳에 내용을 입력하세요) </p>\n');">
 	<input id="codeBtn" type="button" value="테이블" onclick="insertAtCursor('class-example', '<table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; class=&quot;tbl_agree&quot;>\n&nbsp;&nbsp;<tr>\n&nbsp;&nbsp;&nbsp;<th>(이곳에 내용을 입력하세요)</th>\n&nbsp;&nbsp;&nbsp;<td>(이곳에 내용을 입력하세요)</td>\n&nbsp;&nbsp;</tr>\n\n&nbsp;&nbsp;<tr>\n&nbsp;&nbsp;&nbsp;<th>(이곳에 내용을 입력하세요)</th>\n&nbsp;&nbsp;&nbsp;<td>(이곳에 내용을 입력하세요)</td>\n&nbsp;&nbsp;</tr>\n</table>\n');">
-	<input id="codeBtn" type="button" value="+라인" onclick="insertAtCursor('class-example', '<tr>(이곳에 내용을 입력하세요)</tr>\n');">
+	<input id="codeBtn" type="button" value="+라인" onclick="insertAtCursor('class-example', '<tr>(이곳에 &quot;+헤드&quot; 또는 &quot;+내용&quot;을 입력하세요)</tr>\n');">
 	<input id="codeBtn" type="button" value="+헤드" onclick="insertAtCursor('class-example', '<th>(이곳에 내용을 입력하세요)</th>\n');">
 	<input id="codeBtn" type="button" value="+내용" onclick="insertAtCursor('class-example', '<td>(이곳에 내용을 입력하세요)</td>\n');">	
 </p>		
@@ -223,8 +223,16 @@
             highlight: '(이곳에 내용을 입력하세요)',
             className: 'yellow'
         		},
-
-    		]
+				{
+            highlight: '(이곳에 "+헤드" 또는 "+내용"을 입력하세요)',
+            className: 'blue'
+        		},
+				{
+			highlight: '(이곳에 내용을 입력하세요)',
+            className: 'blue'
+        		}
+			
+			]
 			});
 		</script>
 			<div style="text-align:right;">
