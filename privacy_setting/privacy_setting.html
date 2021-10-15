@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>개이정보 수집 및 이용 동의 수정</title>
+		<title>개인정보 수집 및 이용 동의 수정</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans+Mono" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -109,6 +109,17 @@
 				background-color: #ffec99;
 			}
 		</style>
+		<style>
+			#codeBtn{
+				padding:3px 20px;
+				cursor:pointer;
+				border-radius:30px;
+				background-color:#9c79ff;
+				font-weight:bold;
+				color:white;
+			}
+			
+		</style>
 
 		<!-- general styles to make this page look decent -->
 		<style>
@@ -123,22 +134,19 @@
 				color: #495057;
 				background-color: #f1f3f5;
 			}
-
-			a {
-				display: inline-block;
-				margin-bottom: 5px;
-				padding: 10px 30px;
-				border-radius: 5px;
-				color: #f8f9fa;
-				background-color: #495057;
-				text-decoration: none;
+			section{
+				margin-top:10px;
 			}
-
-			section {
-				margin-top: 60px;
-			}
-
 		</style>
+		<script>
+		function open_closed(){
+			if(story.style.display=='none') 
+			{story.style.display='block';
+ 			 more.innerText='▲접기'} 
+			else {story.style.display='none';
+			more.innerText='▼소스도우미'}
+		}
+		</script>
 	</head>
 	<body>
 
@@ -146,9 +154,34 @@
 			<div id="result" class="agreeType2">
 			</div>
 		</div>
+
+		<section>
+<span id="more" style="CURSOR: pointer;float:right;border:1px solid gray;border-radius:30px;padding:2px 20px;" onclick="open_closed()">▼소스도우미
+</span>
+
+<div id="story" style="display: none;text-align:center;">
+<HR>
+	<p>
+	<input id="codeBtn" type="button" value="줄바꿈" onclick="insertAtCursor('class-example', '<br>\n');">
+	<input id="codeBtn" type="button" value="네모칸" onclick="insertAtCursor('class-example', '<p> (이곳에 내용을 입력하세요) </p>\n');">
+	<input id="codeBtn" type="button" value="테이블" onclick="insertAtCursor('class-example', '<table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; class=&quot;tbl_agree&quot;>\n&nbsp;&nbsp;<tr>\n&nbsp;&nbsp;&nbsp;<th></th>\n&nbsp;&nbsp;&nbsp;<td></td>\n&nbsp;&nbsp;</tr>\n\n&nbsp;&nbsp;<tr>\n&nbsp;&nbsp;&nbsp;<th></th>\n&nbsp;&nbsp;&nbsp;<td></td>\n&nbsp;&nbsp;</tr>\n</table>\n');">
+	<input id="codeBtn" type="button" value="+라인" onclick="insertAtCursor('class-example', '<tr>(여기에 내용을 업력하세요)</tr>\n');">
+	<input id="codeBtn" type="button" value="+헤드" onclick="insertAtCursor('class-example', '<th>(여기에 내용을 업력하세요)</th>\n');">
+	<input id="codeBtn" type="button" value="+내용" onclick="insertAtCursor('class-example', '<td>(여기에 내용을 업력하세요)</td>\n');">	
+	<input id="codeBtn" type="button" value="리스트" onclick="insertAtCursor('class-example', '<ul>\n&nbsp;&nbsp;<li>(여기에 내용을 업력하세요)</li>\n</ul>\n');">
+</p>		
+<p>
+	<input id="codeBtn" type="button" value="+라인" onclick="insertAtCursor('class-example', '&nbsp;&nbsp;<li>(여기에 내용을 업력하세요)</li>\n');">
+	<input id="codeBtn" type="button" value="타이틀" onclick="insertAtCursor('class-example', '<h2>(여기에 내용을 입력하세요)</h2>\n');">
+	<input id="codeBtn" type="button" value="작은 타이틀" onclick="insertAtCursor('class-example', '<h3>(여기에 내용을 업력하세요)</h3>\n');">
+</p>
+<HR>
+</div>
+</section>
+
 		<section>
 			<h2>소스코드 입력</h2>
-			<textarea id="class-example" class="class-example"></textarea>
+			<textarea id="class-example" class="class-example" placeholder="여기에 소스코드를 입력하세요."></textarea>
 		</section>
 	
 		<script>
@@ -194,49 +227,6 @@
 		</script>
 			<div style="text-align:right;">
 				<button id="preview" style="cursor:pointer;">미리보기</button>
-
-			<div style="position:fixed;right:10vw;bottom:20vw;">
-		<table>
-			<tr>
-				<td><input type="button" value="줄바꿈" onclick="insertAtCursor('class-example', '<br>\n');"></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>
-					<input type="button" value="네모칸" onclick="insertAtCursor('class-example', '<p> (이곳에 내용을 입력하세요) </p>\n');">
-				</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>
-					<input type="button" value="테이블" onclick="insertAtCursor('class-example', '<table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; class=&quot;tbl_agree&quot;>\n&nbsp;&nbsp;<tr>\n&nbsp;&nbsp;&nbsp;<th></th>\n&nbsp;&nbsp;&nbsp;<td></td>\n&nbsp;&nbsp;</tr>\n\n&nbsp;&nbsp;<tr>\n&nbsp;&nbsp;&nbsp;<th></th>\n&nbsp;&nbsp;&nbsp;<td></td>\n&nbsp;&nbsp;</tr>\n</table>\n');">
-				</td>
-				<td>
-					<input type="button" value="+라인" onclick="insertAtCursor('class-example', '<tr>(여기에 내용을 업력하세요)</tr>\n');"></td>
-				</td>
-				<td>
-					<input type="button" value="+헤드" onclick="insertAtCursor('class-example', '<th>(여기에 내용을 업력하세요)</th>\n');">
-				</td>
-				<td>
-					<input type="button" value="+내용" onclick="insertAtCursor('class-example', '<td>(여기에 내용을 업력하세요)</td>\n');">	
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="button" value="리스트" onclick="insertAtCursor('class-example', '<ul>\n&nbsp;&nbsp;<li>(여기에 내용을 업력하세요)</li>\n</ul>\n');">
-				</td>
-				<td>
-					<input type="button" value="+라인" onclick="insertAtCursor('class-example', '&nbsp;&nbsp;<li>(여기에 내용을 업력하세요)</li>\n');">
-				</td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-			</div>
 			</div>
 			</body>
 </html>
