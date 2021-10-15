@@ -117,6 +117,7 @@
 				background-color:#9c79ff;
 				font-weight:bold;
 				color:white;
+				box-shadow:2px 2px 2px 2px gray;
 			}
 			
 		</style>
@@ -145,6 +146,11 @@
  			 more.innerText='▲접기'} 
 			else {story.style.display='none';
 			more.innerText='▼소스도우미'}
+		}
+		</script>
+		<script type="text/javascript">
+		function txtareaReset(){
+			document.getElementById("class-example").value='';
 		}
 		</script>
 	</head>
@@ -295,6 +301,7 @@
 			});
 		</script>
 			<div style="text-align:right;">
+				<button id="resetBtn" style="cursor:pointer;float:left;" onClick="txtareaReset()">초기화</button>
 				<button id="preview" style="cursor:pointer;">미리보기</button>
 			</div>
 			</body>
