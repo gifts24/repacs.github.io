@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>개이정보 수집 및 이용 동의 수정</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans+Mono" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- highlight-within-textarea CSS/JS -->
+		<link href="jquery.highlight-within-textarea.css" rel="stylesheet">
+		<script src="jquery.highlight-within-textarea.js"></script>
+		<link media="screen" type="text/css" rel="stylesheet" href="https://demo5.saramin.co.kr/common/css/policy.css">
+
+		<style>
+		.law{border:1px solid #d0d0d0;font-size:12px;font-family:dotum;line-height:160%;padding:17px 19px;height:219px;overflow:hidden;overflow-y:auto;}
+		</style>
+
+		<!-- custom styles for highlight-within-textarea -->
+		<script>
+			window.onload=function() {
+			 document.getElementById("preview").onclick=processText;
+			}
+			
+			function processText() {
+			 var txtBox = document.getElementById("class-example");
+			 var lines = txtBox.value.split("\n");
+			
+			 // generate HTML version of text
+			 var resultString  = "<div>";
+			 for (var i = 0; i < lines.length; i++) {
+			   resultString += lines[i];
+				}
+			 resultString += "</div>";
+			 // print out to page
+			 var   blk   = document.getElementById("result");
+			 blk.innerHTML  =  resultString; 
+			}
+		</script>
+		<script>
+			
+				function insertAtCursor(areaId,text)
+				{
+					var txtarea = document.getElementById(areaId);
+					var scrollPos = txtarea.scrollTop;
+					var strPos = 0;
+					var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ?
+						"ff" : (document.selection ? "ie" : false ) );
+					if (br == "ie") {
+						txtarea.focus();
+						var range = document.selection.createRange();
+						range.moveStart ('character', -txtarea.value.length);
+						strPos = range.text.length;
+					}
+					else if (br == "ff") strPos = txtarea.selectionStart;
+				 
+					var front = (txtarea.value).substring(0,strPos);
+					var back = (txtarea.value).substring(strPos,txtarea.value.length);
+					txtarea.value=front+text+back;
+					strPos = strPos + text.length;
+					if (br == "ie") {
+						txtarea.focus();
+						var range = document.selection.createRange();
+						range.moveStart ('character', -txtarea.value.length);
+						range.moveStart ('character', strPos);
+						range.moveEnd ('character', 0);
+						range.select();
+					}
+					else if (br == "ff") {
+						txtarea.selectionStart = strPos;
+						txtarea.selectionEnd = strPos;
+						txtarea.focus();
+					}
+					txtarea.scrollTop = scrollPos;
+				}
+				
+		</script>
+		<style>
+			.hwt-container {
+				background-color: #f8f9fa;
+			}
+
+			.hwt-content {
+				width: 760px;
+				height: 250px;
+				padding: 20px;
+				border: 1px solid #adb5bd;
+				color: inherit;
+			}
+
+			.hwt-input:focus {
+				outline-color: #495057;
+			}
+
+			.hwt-content mark {
+				border-radius: 3px;
+				background-color: #d0bfff;
+			}
+
+			.hwt-content mark.red {
+				background-color: #ffc9c9;
+			}
+
+			.hwt-content mark.blue {
+				background-color: #a3daff;
+			}
+
+			.hwt-content mark.yellow {
+				background-color: #ffec99;
+			}
+		</style>
+
+		<!-- general styles to make this page look decent -->
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				max-width: 800px;
+				margin: 40px auto;
+				padding: 0 20px;
+				color: #495057;
+				background-color: #f1f3f5;
+			}
+
+			a {
+				display: inline-block;
+				margin-bottom: 5px;
+				padding: 10px 30px;
+				border-radius: 5px;
+				color: #f8f9fa;
+				background-color: #495057;
+				text-decoration: none;
+			}
+
+			section {
+				margin-top: 60px;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div class="law" style="width:780px;height:500px;border:1px solid gray;background-color:white;">
+			<div id="result" class="agreeType2">
+			</div>
+		</div>
+		<section>
+			<h2>소스코드 입력</h2>
+			<textarea id="class-example" class="class-example"></textarea>
+		</section>
+	
+		<script>
+			$('.class-example').highlightWithinTextarea({
+    		highlight: [
+        		{
+            highlight: '<p>',
+            className: 'red'
+        		},
+			{
+			highlight: '</p>',
+            className: 'red'
+        		},
+        		{		
+            highlight: '<div>',
+            className: 'blue'
+        		},
+				{		
+            highlight: '</div>',
+            className: 'blue'
+        		},
+        	
+			//{
+            //highlight: /ba(na)*/gi,
+            //className: 'yellow'
+        	//	},
+				{
+            highlight: '<br>',
+            className: 'yellow'
+        		},
+				{
+            highlight: '<table cellpadding="0" cellspacing="0" border="0" class="tbl_agree">',
+            className: 'purple'
+        		},
+				{
+            highlight: '</table>',
+            className: 'purple'
+        		}
+
+
+    		]
+			});
+		</script>
+			<div style="text-align:right;">
+				<button id="preview" style="cursor:pointer;">미리보기</button>
+
+			<div style="position:fixed;right:10vw;bottom:20vw;">
+		<table>
+			<tr>
+				<td><input type="button" value="줄바꿈" onclick="insertAtCursor('class-example', '<br>\n');"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="네모칸" onclick="insertAtCursor('class-example', '<p> (이곳에 내용을 입력하세요) </p>\n');">
+				</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="테이블" onclick="insertAtCursor('class-example', '<table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; class=&quot;tbl_agree&quot;>\n&nbsp;&nbsp;<tr>\n&nbsp;&nbsp;&nbsp;<th></th>\n&nbsp;&nbsp;&nbsp;<td></td>\n&nbsp;&nbsp;</tr>\n\n&nbsp;&nbsp;<tr>\n&nbsp;&nbsp;&nbsp;<th></th>\n&nbsp;&nbsp;&nbsp;<td></td>\n&nbsp;&nbsp;</tr>\n</table>\n');">
+				</td>
+				<td>
+					<input type="button" value="+라인" onclick="insertAtCursor('class-example', '<tr>(여기에 내용을 업력하세요)</tr>\n');"></td>
+				</td>
+				<td>
+					<input type="button" value="+헤드" onclick="insertAtCursor('class-example', '<th>(여기에 내용을 업력하세요)</th>\n');">
+				</td>
+				<td>
+					<input type="button" value="+내용" onclick="insertAtCursor('class-example', '<td>(여기에 내용을 업력하세요)</td>\n');">	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="리스트" onclick="insertAtCursor('class-example', '<ul>\n&nbsp;&nbsp;<li>(여기에 내용을 업력하세요)</li>\n</ul>\n');">
+				</td>
+				<td>
+					<input type="button" value="+라인" onclick="insertAtCursor('class-example', '&nbsp;&nbsp;<li>(여기에 내용을 업력하세요)</li>\n');">
+				</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+			</div>
+			</div>
+			</body>
+</html>
